@@ -5,7 +5,7 @@
 # JW
 ########################################################################
 
-library(ggplot)
+library(ggplot2)
 library(broom)
 
 # Inputs for the all functions are linear regression models
