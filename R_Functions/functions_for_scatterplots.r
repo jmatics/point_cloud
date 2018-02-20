@@ -47,10 +47,10 @@ lm_rmse <- function(lmodel){
 }
 
 # Adding function to ggplot
-/
-geom_text(x = 0.18, y = 0.8, label = lm_rmse(lm_fmy), parse = TRUE)
-x is x location of the text in the graph area
-y is y location of the text in the graph area
-label will be assigned according to the function's output value
-/
+#/
+#geom_text(x = 0.18, y = 0.8, label = lm_rmse(lm_fmy), parse = TRUE)
+#x is x location of the text in the graph area
+#y is y location of the text in the graph area
+#label will be assigned according to the function's output value
+#/
 ########## END ###################
