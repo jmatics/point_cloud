@@ -23,6 +23,8 @@ lm_eqn <- function(lmodel){
 
 # Function to add p value and siginificant codes
 
+# Function for exact p value
+
 lm_pvalue <- function(lmodel){
   # Identifying what is the significant code
   if (glance(lmodel)$p.value < 0.001){st = "***"}
@@ -37,6 +39,15 @@ lm_pvalue <- function(lmodel){
                             star = st))
   as.character(as.expression(pvalue)); 
 }
+
+# Function for "p < 0.001"
+
+lm_p <- function(lmodel){
+  eq <- substitute(italic(p)~" < 0.001", 
+                   list(rmse = format(sqrt(mean(lmodel$residuals^2)), digits = 2)))
+  as.character(as.expression(eq));                 
+}
+
 
 # Function to add RMSE
 
