@@ -57,6 +57,13 @@ lm_rmse <- function(lmodel){
   as.character(as.expression(eq));                 
 }
 
+# Function to calculate RMSE
+
+# Function that returns Root Mean Squared Error
+rmse <- function(error){
+  sqrt(mean(error^2))
+}
+
 # Adding function to ggplot
 #/
 #geom_text(x = 0.18, y = 0.8, label = lm_rmse(lm_fmy), parse = TRUE)
