@@ -14,10 +14,10 @@ library(broom)
 
 lm_eqn <- function(lmodel){
   eq <- substitute(italic(y) == a + b %.% italic(x)*","
-                   ~~italic(R)^2~"="~r2, 
+                   ~~italic(Adj.R)^2~"="~r2, 
                    list(a = format(coef(lmodel)[1], digits = 2), 
                         b = format(coef(lmodel)[2], digits = 2), 
-                        r2 = format(summary(lmodel)$r.squared, digits = 3)))
+                        r2 = format(summary(lmodel)$adj.r.squared, digits = 3)))
   as.character(as.expression(eq));                 
 }
 
